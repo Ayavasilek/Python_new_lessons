@@ -1,0 +1,18 @@
+#string = input("Введите что-нибудь")
+#words = string.split()
+#print(len(words))
+
+string = input("Введите что-нибудь: ")
+words = []
+i = 0
+word = ''
+while i < len(string):
+    if string[i] == ' ':
+        if word != '':
+            words.append(word)
+            word = ''
+    else:
+        word += string[i]
+    i += 1
+words.append(word)
+print(words)
