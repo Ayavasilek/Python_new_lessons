@@ -14,6 +14,5 @@ while True:
     x += delta
     if x <= 0 or x > 240:
         delta = -delta
-    
-    
+        
 window.mainloop()
