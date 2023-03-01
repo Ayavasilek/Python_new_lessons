@@ -1,0 +1,19 @@
+import tkinter
+import time
+window = tkinter.Tk()
+canvas = tkinter.Canvas(window)
+canvas.pack()
+
+rect = canvas.create_rectangle(10, 10, 50, 50)
+x = 0
+delta = 2
+while True:
+    canvas.coords(rect, x ,10, x + 50, 50)
+    canvas.update()
+    time.sleep(0.1)
+    x += delta
+    if x <= 0 or x > 240:
+        delta = -delta
+    
+    
+window.mainloop()
