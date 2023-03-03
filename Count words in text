@@ -1,0 +1,7 @@
+string = input("Введите предложение: ")
+word = input("Введите слово для поиска: ")
+string = string.replace(".", " ").lower()
+string = string.replace(",", " ").lower()
+words = string.split()
+word = word.lower()
+print(words.count(word))
